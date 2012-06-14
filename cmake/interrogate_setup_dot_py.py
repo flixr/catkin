@@ -92,7 +92,7 @@ sys.modules['distutils.core'] = d
 # so the import of __version__ works
 os.chdir(os.path.dirname(os.path.abspath(sys.argv[2])))
 
-execfile(sys.argv[2])
+exec(compile(open(sys.argv[2]).read(), sys.argv[2], 'exec'))
 
 
 
